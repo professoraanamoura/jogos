@@ -135,6 +135,25 @@
           p2.style="color:black";
         }
         total+=1;
+        testa();
+      };
+      function testa(){
+
+        btn00 = document.getElementById('btn00');
+        btn01 = document.getElementById('btn01');
+        btn00 = document.getElementById('btn02');
+        btn00 = document.getElementById('btn10');
+        btn01 = document.getElementById('btn11');
+        btn00 = document.getElementById('btn12');
+        btn00 = document.getElementById('btn20');
+        btn01 = document.getElementById('btn21');
+        btn00 = document.getElementById('btn22');
+        if(total>=5){
+          alert(btn00.innerText===btn02.innerText);
+          if(btn00.innerText===btn01.innerText){
+              alert('Ganhador!');
+          }
+        }
       };
 
   </script>
