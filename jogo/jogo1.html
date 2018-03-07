@@ -11,6 +11,7 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+  
   <nav class="lighten-1 lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">Jogos</a>
       <ul class="right hide-on-med-and-down">        
@@ -51,19 +52,19 @@
       <table class=" bordered responsive-table">
 
           <tr>
-              <td><button id="btn00" class="btn waves-effect waves-light red" onclick="click('btn00')"></button></td>
-              <td><button id="btn01"  class="btn waves-effect waves-light red"></button></td>
-              <td><button id="btn02"  class="btn waves-effect waves-light red"></button></td>
+              <td><button id="btn00" class="btn waves-effect waves-light red" onclick="clica('btn00')"></button></td>
+              <td><button id="btn01"  class="btn waves-effect waves-light red" onclick="clica('btn01')"></button></td>
+              <td><button id="btn02"  class="btn waves-effect waves-light red" onclick="clica('btn02')"></button></td>
           </tr>
           <tr>
-              <td><button id="btn10"  class="btn waves-effect waves-light red"></button></td>
-              <td><button id="btn11"  class="btn waves-effect waves-light red"></button></td>
-              <td><button id="btn12"  class="btn waves-effect waves-light red"></button></td>
+              <td><button id="btn10"  class="btn waves-effect waves-light red" onclick="clica('btn10')"></button></td>
+              <td><button id="btn11"  class="btn waves-effect waves-light red" onclick="clica('btn11')"></button></td>
+              <td><button id="btn12"  class="btn waves-effect waves-light red" onclick="clica('btn12')"></button></td>
           </tr>
           <tr>
-              <td><button id="btn20"  class="btn waves-effect waves-light red"></button></td>
-              <td><button id="btn21"  class="btn waves-effect waves-light red"></button></td>
-              <td><button id="btn22"  class="btn waves-effect waves-light red"></button></td>
+              <td><button id="btn20"  class="btn waves-effect waves-light red" onclick="clica('btn20')"></button></td>
+              <td><button id="btn21"  class="btn waves-effect waves-light red" onclick="clica('btn21')"></button></td>
+              <td><button id="btn22"  class="btn waves-effect waves-light red" onclick="clica('btn22')"></button></td>
           </tr>  
       </table>
       </div>
@@ -115,23 +116,26 @@
       total=0;
       p1.style="color:red";
       p2.style="color:black";
-      function click(id){
-        alert('oi!');
+      
+      function clica(id){
+        
         if(pAtual==1){
           b = document.getElementById(id);
-          b.text="X";
+          b.innerText="X";
+          b.disabled=true
           pAtual=2;
           p1.style="color:black";
           p2.style="color:red";
         }else  {
-          b = document.querySelector("#"+id);
-          b.text="O";
+          b = document.getElementById(id);
+          b.innerText="0";
+          b.disabled=true
           pAtual=1;
           p1.style="color:red";
           p2.style="color:black";
         }
         total+=1;
-      }
+      };
 
   </script>
   </body>
