@@ -52,19 +52,19 @@
       <table class=" bordered responsive-table">
 
           <tr>
-              <td><button id="btn00" class="btn waves-effect waves-light red" onclick="clica('btn00')"></button></td>
-              <td><button id="btn01"  class="btn waves-effect waves-light red" onclick="clica('btn01')"></button></td>
-              <td><button id="btn02"  class="btn waves-effect waves-light red" onclick="clica('btn02')"></button></td>
+              <td><button id="btn00" class="btn waves-effect waves-light red" onclick="clica('btn00')">&nbsp</button></td>
+              <td><button id="btn01"  class="btn waves-effect waves-light red" onclick="clica('btn01')">&nbsp</button></td>
+              <td><button id="btn02"  class="btn waves-effect waves-light red" onclick="clica('btn02')">&nbsp</button></td>
           </tr>
           <tr>
-              <td><button id="btn10"  class="btn waves-effect waves-light red" onclick="clica('btn10')"></button></td>
-              <td><button id="btn11"  class="btn waves-effect waves-light red" onclick="clica('btn11')"></button></td>
-              <td><button id="btn12"  class="btn waves-effect waves-light red" onclick="clica('btn12')"></button></td>
+              <td><button id="btn10"  class="btn waves-effect waves-light red" onclick="clica('btn10')">&nbsp</button></td>
+              <td><button id="btn11"  class="btn waves-effect waves-light red" onclick="clica('btn11')">&nbsp</button></td>
+              <td><button id="btn12"  class="btn waves-effect waves-light red" onclick="clica('btn12')">&nbsp</button></td>
           </tr>
           <tr>
-              <td><button id="btn20"  class="btn waves-effect waves-light red" onclick="clica('btn20')"></button></td>
-              <td><button id="btn21"  class="btn waves-effect waves-light red" onclick="clica('btn21')"></button></td>
-              <td><button id="btn22"  class="btn waves-effect waves-light red" onclick="clica('btn22')"></button></td>
+              <td><button id="btn20"  class="btn waves-effect waves-light red" onclick="clica('btn20')">&nbsp</button></td>
+              <td><button id="btn21"  class="btn waves-effect waves-light red" onclick="clica('btn21')">&nbsp</button></td>
+              <td><button id="btn22"  class="btn waves-effect waves-light red" onclick="clica('btn22')">&nbsp</button></td>
           </tr>  
       </table>
       </div>
@@ -73,7 +73,7 @@
     <div -class="section " style="float:right;width:25%">
       <div class="col s12 m4">
           <div class="icon-block">
-            <button id="btn20"  class="btn waves-effect waves-light red">Reiniciar</button>
+            <button id="btn20"  class="btn waves-effect waves-light red" onclick="location.reload();" >Reiniciar</button>
           </div>
         </div>
       </div>
@@ -135,32 +135,66 @@
           p2.style="color:black";
         }
         total+=1;
-        testa();
-      };
-      function testa(){
-
-        btn00 = document.getElementById('btn00');
-        btn01 = document.getElementById('btn01');
-        btn00 = document.getElementById('btn02');
-        btn00 = document.getElementById('btn10');
-        btn01 = document.getElementById('btn11');
-        btn00 = document.getElementById('btn12');
-        btn00 = document.getElementById('btn20');
-        btn01 = document.getElementById('btn21');
-        btn00 = document.getElementById('btn22');
+        
         if(total>=5){
-          alert(btn00.innerText===btn02.innerText);
-          if(btn00.innerText===btn01.innerText){
-              alert('Ganhador!');
+          btn00 = document.getElementById('btn00').innerText.trim();
+          btn01 = document.getElementById('btn01').innerText.trim();
+          btn02 = document.getElementById('btn02').innerText.trim();
+          btn10 = document.getElementById('btn10').innerText.trim();
+          btn11 = document.getElementById('btn11').innerText.trim();
+          btn12 = document.getElementById('btn12').innerText.trim();
+          btn20 = document.getElementById('btn20').innerText.trim();
+          btn21 = document.getElementById('btn21').innerText.trim();
+          btn22 = document.getElementById('btn22').innerText.trim();  
+          if(btn00.length>0&&btn00===btn01&&btn00===btn02){
+              
+              alert((btn00==="X")?"Vencedor: Jogador 1":"Vencedor: Jogaor 2"); para();
+          }
+          else if(btn10.length>0&&btn10===btn11&&btn10===btn12){
+            
+              alert((btn10==="X")?"Vencedor: Jogador 1":"Vencedor: Jogaor 2"); para();
+          }
+          else if(btn20.length>0&&btn20===btn21&&btn20===btn22){
+            
+              alert((btn20==="X")?"Vencedor: Jogador 1":"Vencedor: Jogaor 2"); para();
+          }
+          else if(btn00.length>0&&btn00===btn10&&btn00===btn20){
+            
+              alert((btn00==="X")?"Vencedor: Jogador 1":"Vencedor: Jogaor 2"); para();
+          }
+          else if(btn01.length>0&&btn01===btn11&&btn01===btn21){
+            
+              alert((btn01==="X")?"Vencedor: Jogador 1":"Vencedor: Jogaor 2"); para();
+          }
+          else if(btn02.length>0&&btn02===btn12&&btn02===btn22){
+            
+              alert((btn02==="X")?"Vencedor: Jogador 1":"Vencedor: Jogaor 2"); para();
+          }
+          else if(btn00.length>0&&btn00===btn11&&btn00===btn22){
+            
+              alert((btn00==="X")?"Vencedor: Jogador 1":"Vencedor: Jogaor 2"); para();
+          }
+          else if(btn20.length>0&&btn20===btn11&&btn11===btn02){
+            
+              alert((btn20==="X")?"Vencedor: Jogador 1":"Vencedor: Jogaor 2"); para();
+          }
+          else if(total==9){
+            alert("Empate");
           }
         }
       };
-
+      function para(){
+          document.getElementById('btn00').disabled=true;
+          document.getElementById('btn01').disabled=true;
+          document.getElementById('btn02').disabled=true;
+          document.getElementById('btn10').disabled=true;
+          document.getElementById('btn11').disabled=true;
+          document.getElementById('btn12').disabled=true;
+          document.getElementById('btn20').disabled=true;
+          document.getElementById('btn21').disabled=true;
+          document.getElementById('btn22').disabled=true;
+      };
+      
   </script>
   </body>
 </html>
-
-
-
-
-
