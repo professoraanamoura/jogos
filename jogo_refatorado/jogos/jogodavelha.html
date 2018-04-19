@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  
+  <title>Jogos</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  
+  <nav class="lighten-1 lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="../index.html" class="brand-logo">Jogos</a>
+      <ul class="right hide-on-med-and-down">        
+        <li><a href="jogo1.html">Jogo da Velha</a></li>
+         <li><a href="#">Jogo da Forca</a></li>
+         <li><a href="#">Jarros</a></li>
+      </ul>           
+      
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="jogo1.html">Jogo da Velha</a></li>
+         <li><a href="#">Jogo da Forca</a></li>
+         <li><a href="#">Jarros</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center text">Jogo da Velha</h1>
+      <div class="row ">
+        <h6 class="header col s12 light">O jogo da velha ou jogo do galo é um jogo e passatempo popular. É um jogo de regras extremamente simples, que não traz grandes dificuldades para seus jogadores e é facilmente aprendido.</h6>
+      </div>
+      <div class="row center">
+            
+      </div>
+     
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section " style="float:left">
+      <div class="col s12 m4">
+          <div class="icon-block">
+      <table class=" bordered responsive-table">
+
+          <tr>
+              <td><button id="btn00" class="btn waves-effect waves-light red" onclick="jogada('btn00');">&nbsp</button></td>
+              <td><button id="btn01"  class="btn waves-effect waves-light red" onclick="jogada('btn01');">&nbsp</button></td>
+              <td><button id="btn02"  class="btn waves-effect waves-light red" onclick="jogada('btn02');">&nbsp</button></td>
+          </tr>
+          <tr>
+              <td><button id="btn10"  class="btn waves-effect waves-light red" onclick="jogada('btn10');">&nbsp</button></td>
+              <td><button id="btn11"  class="btn waves-effect waves-light red" onclick="jogada('btn11');">&nbsp</button></td>
+              <td><button id="btn12"  class="btn waves-effect waves-light red" onclick="jogada('btn12');">&nbsp</button></td>
+          </tr>
+          <tr>
+              <td><button id="btn20"  class="btn waves-effect waves-light red" onclick="jogada('btn20');">&nbsp</button></td>
+              <td><button id="btn21"  class="btn waves-effect waves-light red" onclick="jogada('btn21');">&nbsp</button></td>
+              <td><button id="btn22"  class="btn waves-effect waves-light red" onclick="jogada('btn22');">&nbsp</button></td>
+          </tr>  
+      </table>
+      </div>
+      </div>
+    </div>
+    <div -class="section " style="float:right;width:25%">
+      <div class="col s12 m4">
+          <div class="icon-block">
+            
+          </div>
+        </div>
+      </div>
+      <div class="section " style="float:right;width:25%">
+      <div class="col s12 m4">
+          <div class="icon-block">
+            <h5 class="header col s12 light" style="color:red" id="jogador1">Jogador 1: X</h5>
+            <br>
+            <h5 class="header col s12 light" id="jogador2">Jogador 2: 0</h5>
+            <br>
+            <button id="btnIniciar"  class="btn waves-effect waves-light red" onclick="reiniciarPartida(1,'jogador1','jogador2');document.getElementById('btnIniciar').innerText=Reiniciar;" >Reiniciar</button>
+          </div>
+        </div>
+      </div>
+    <br><br><br><br><br><br><br><br><br><br>
+  </div>
+  
+  <footer class="page-footer light">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          
+        </div>
+        
+    </div>
+    
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+  <script src="funcoesjogodavelha.js"></script>
+  <script type="text/javascript"> iniciarPartida(1,"jogador1","jogador2");</script>
+  </body>
+</html>
